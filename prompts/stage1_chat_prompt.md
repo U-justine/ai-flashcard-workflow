@@ -22,6 +22,3 @@ Rules:
 7. Use only facts from the notes. Do not invent outside information.
 8. Formatting: If a command is mentioned (like git add), wrap it in backticks (e.g., `git add`).
 9. Resolve abbreviations: If the notes use arrows (->), write out the full meaning in the answer.
-
---- STOP COPYING HERE ---
-[Paste your raw study notes below this line]
