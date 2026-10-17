@@ -108,7 +108,7 @@ Full log: `docs/test_run_log.txt`. Summary:
 
 | Check | Result |
 |-------|--------|
-| Sample deck passes the gate |  PASS, 12 cards |
+| Sample deck passes the gate |  PASS, 32 cards |
 | Unit tests |  12/12 pass |
 | Quiz run (hard cards, 1 right / 1 wrong) |  Score 1/2 (50%), missed card listed |
 | Broken AI output (missing answer, bad difficulty, duplicate id) |  Caught, 4 clear errors, exit code 1 |
@@ -144,12 +144,3 @@ The biggest saving is reuse: after the first run, a new topic only needs Step 1.
 | `difficulty must be one of...` | Paste the error into the chat; it will fix the values. |
 | `python3: command not found` (Windows) | Use `python` instead of `python3`. |
 | `./run_workflow.sh: Permission denied` | Run `chmod +x run_workflow.sh` or use `bash run_workflow.sh`. |
-
-## 9. Evaluation criteria mapping
-
-| Criterion | Where it is shown |
-|-----------|-------------------|
-| Functionality (40%) | `run_workflow.sh`, 12 passing tests, `docs/test_run_log.txt` |
-| Adaptability (20%) | Section 6, generic prompts, file contract, stdlib only |
-| Documentation (20%) | Diagram (Section 2), steps (Section 4) |
-| Efficiency (20%) | Section 7, one-command run, automatic error feedback loop |
