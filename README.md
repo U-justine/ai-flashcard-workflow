@@ -1,6 +1,7 @@
 # AI Flashcard Workflow: Chat AI → CLI/IDE AI
 
 **By Justine Umutoni**
+
 **Course:** Applied AI & Prompt Engineering
 
 ## 1. The Problem I Solved
