@@ -1,8 +1,14 @@
 # AI Flashcard Workflow: Chat AI → CLI/IDE AI
 
 **By Justine Umutoni**
+<<<<<<< HEAD
 **Course:** Applied AI & Prompt Engineering
 
+=======
+
+**Course:** Applied AI & Prompt Engineering
+
+>>>>>>> 5ca483f156fbca65276cd67b2bde5bcf43c3a212
 ## 1. The Problem I Solved
 Making flashcards by hand from my lecture notes was taking too much time, and building a custom tool to study them was even slower. I realized this task splits perfectly into two stages: understanding text (which Chat AI is great at) and writing code inside a project (which CLI/IDE AI is great at). 
 
@@ -29,4 +35,8 @@ flowchart LR
     E --> F[quiz.py + tests/]
     F --> G{Tests pass?}
     G -- No --> E
+<<<<<<< HEAD
     G -- Yes --> H[run_workflow.sh<br/>Interactive quiz]
+=======
+    G -- Yes --> H[run_workflow.sh<br/>Interactive quiz]
+>>>>>>> 5ca483f156fbca65276cd67b2bde5bcf43c3a212
