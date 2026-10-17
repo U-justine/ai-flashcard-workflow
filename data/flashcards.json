@@ -1,0 +1,38 @@
+{
+  "topic": "Git Basics and Data Engineering",
+  "cards": [
+    {"id": 1, "question": "What kind of version control system is Git?", "answer": "A distributed version control system; every developer has a full copy of the repository history.", "difficulty": "easy"},
+    {"id": 2, "question": "What does `git init` do?", "answer": "Creates a new, empty repository in the current folder by making a hidden .git directory.", "difficulty": "easy"},
+    {"id": 3, "question": "What does `git clone <url>` do?", "answer": "Copies an existing remote repository to your machine.", "difficulty": "easy"},
+    {"id": 4, "question": "What are Git's three main areas?", "answer": "The working directory, the staging area (index), and the repository (commits).", "difficulty": "medium"},
+    {"id": 5, "question": "What does `git add` do?", "answer": "Moves changes from the working directory into the staging area.", "difficulty": "easy"},
+    {"id": 6, "question": "What does `git commit -m \"msg\"` do?", "answer": "Saves the staged snapshot to the repository history with a message.", "difficulty": "easy"},
+    {"id": 7, "question": "Which command shows modified, staged, and untracked files?", "answer": "git status", "difficulty": "easy"},
+    {"id": 8, "question": "What is a branch in Git?", "answer": "A lightweight, movable pointer to a commit.", "difficulty": "medium"},
+    {"id": 9, "question": "What does `git merge` do?", "answer": "Combines another branch into the current branch.", "difficulty": "medium"},
+    {"id": 10, "question": "When does a merge conflict happen, and how is it resolved?", "answer": "When the same lines changed differently on two branches; fix the lines manually, then add and commit.", "difficulty": "hard"},
+    {"id": 11, "question": "What is `git pull` made of?", "answer": "A fetch followed by a merge.", "difficulty": "hard"},
+    {"id": 12, "question": "What is a .gitignore file for?", "answer": "It lists files or patterns Git should not track, such as node_modules or .env.", "difficulty": "medium"},
+    
+    {"id": 13, "question": "What is ETL?", "answer": "Extract, Transform, Load. The process of pulling data from sources, cleaning it, and loading it into a warehouse.", "difficulty": "easy"},
+    {"id": 14, "question": "What is the difference between a Data Lake and a Data Warehouse?", "answer": "A Data Lake stores raw, unstructured data cheaply. A Data Warehouse stores structured, processed data optimized for fast querying.", "difficulty": "medium"},
+    {"id": 15, "question": "What is an idempotent pipeline?", "answer": "A pipeline that produces the exact same result whether it is run once or ten times. It prevents duplicate data.", "difficulty": "hard"},
+    {"id": 16, "question": "What is a Primary Key in a database?", "answer": "A column (or set of columns) that uniquely identifies every row in a table. It cannot be null.", "difficulty": "easy"},
+    {"id": 17, "question": "What is a Foreign Key?", "answer": "A column that creates a link between two tables, enforcing referential integrity by pointing to a Primary Key in another table.", "difficulty": "easy"},
+    {"id": 18, "question": "What is the difference between a LEFT JOIN and an INNER JOIN?", "answer": "INNER JOIN returns rows that match in both tables. LEFT JOIN returns all rows from the left table, plus matches from the right (or NULLs).", "difficulty": "medium"},
+    {"id": 19, "question": "What is Data Partitioning?", "answer": "Splitting a large table into smaller, more manageable pieces (e.g., by date) to improve query performance and make maintenance easier.", "difficulty": "medium"},
+    {"id": 20, "question": "What is a batch pipeline vs. a streaming pipeline?", "answer": "Batch processes large chunks of data on a schedule (e.g., nightly). Streaming processes data continuously in real-time as it arrives.", "difficulty": "medium"},
+    {"id": 21, "question": "What is a DAG in data engineering?", "answer": "Directed Acyclic Graph. A workflow map used by tools like Airflow to show the order tasks must run and their dependencies.", "difficulty": "hard"},
+    {"id": 22, "question": "What is Data Normalization?", "answer": "Organizing data to reduce redundancy and improve integrity, usually by splitting data into separate, related tables (e.g., 1NF, 2NF, 3NF).", "difficulty": "medium"},
+    {"id": 23, "question": "What is a Star Schema?", "answer": "A data model with one central 'fact' table (metrics) connected to several 'dimension' tables (context like time, location, product).", "difficulty": "hard"},
+    {"id": 24, "question": "What is the purpose of a Surrogate Key?", "answer": "A system-generated, meaningless integer (like an auto-increment ID) used as a Primary Key to protect against changes in natural business keys.", "difficulty": "hard"},
+    {"id": 25, "question": "Why is it bad to use `SELECT *` in a production pipeline?", "answer": "It pulls unnecessary columns, increases memory usage, and will break the pipeline if the source table's column order changes.", "difficulty": "easy"},
+    {"id": 26, "question": "What is a Slowly Changing Dimension (SCD)?", "answer": "A dimension table that tracks historical changes to data over time (e.g., tracking a customer's previous address).", "difficulty": "hard"},
+    {"id": 27, "question": "What does the `GROUP BY` SQL clause do?", "answer": "It groups rows that have the same values into summary rows, usually to apply aggregate functions like COUNT, MAX, or SUM.", "difficulty": "easy"},
+    {"id": 28, "question": "What is a Data Pipeline?", "answer": "A set of automated processes that move data from one system to another, often involving extraction, transformation, and loading.", "difficulty": "easy"},
+    {"id": 29, "question": "What is 'Dirty Data'?", "answer": "Data that has errors, duplicates, missing values, or formatting issues that make it unsuitable for analysis until it is cleaned.", "difficulty": "easy"},
+    {"id": 30, "question": "What is an ORM?", "answer": "Object-Relational Mapper. A tool that lets you interact with a database using object-oriented code (like Python classes) instead of raw SQL.", "difficulty": "medium"},
+    {"id": 31, "question": "What is Data Governance?", "answer": "The overall management of data availability, usability, integrity, and security in an organization.", "difficulty": "hard"},
+    {"id": 32, "question": "Why is `NULL` different from `0` or an empty string?", "answer": "`NULL` means 'unknown' or 'missing'. It is not a value, so you cannot compare it with `=`. You must use `IS NULL`.", "difficulty": "medium"}
+  ]
+}

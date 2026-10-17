@@ -1,0 +1,38 @@
+Git Basics and Data Engineering - raw lecture notes
+
+GIT BASICS:
+git is a distributed version control system, every dev has full copy of the repo history.
+git init -> creates a new empty repo in the current folder (makes the hidden .git dir)
+git clone <url> copies an existing remote repo to your machine
+3 areas: working directory, staging area (index), repository (commits)
+git add moves changes from working dir into staging area
+git commit -m "msg" saves staged snapshot to the repo history
+git status shows which files are modified / staged / untracked
+git log = commit history
+branch = lightweight movable pointer to a commit. git branch <name> creates one, git switch <name> (or checkout) moves to it
+git merge combines another branch into the current branch
+merge conflict happens when same lines changed differently on two branches -> must fix manually then add + commit
+git push uploads local commits to remote, git pull = fetch + merge
+.gitignore file lists files/patterns git should not track (e.g. node_modules, .env)
+
+DATA ENGINEERING:
+ETL = Extract, Transform, Load. pulling data from sources, cleaning it, loading to warehouse.
+Data Lake vs Data Warehouse -> Lake is raw unstructured cheap. Warehouse is structured processed fast query.
+Idempotent pipeline = produces exact same result whether run once or 10 times. stops duplicate data.
+Primary Key = uniquely identifies every row. cannot be null.
+Foreign Key = creates link between two tables, enforces referential integrity.
+LEFT JOIN vs INNER JOIN -> INNER returns matches in both. LEFT returns all from left plus matches from right.
+Data Partitioning = splitting large table into smaller pieces (e.g. by date) for speed.
+Batch pipeline vs Streaming pipeline -> Batch is large chunks on schedule. Streaming is continuous real-time.
+DAG = Directed Acyclic Graph. workflow map in Airflow showing order tasks must run.
+Data Normalization = organizing data to reduce redundancy, splitting into related tables (1NF, 2NF, 3NF).
+Star Schema = data model with one central fact table (metrics) connected to dimension tables (time, location).
+Surrogate Key = system-generated meaningless integer (auto-increment) used as primary key to protect against business key changes.
+DON'T use SELECT * in prod pipelines -> pulls unnecessary columns, increases memory, breaks if column order changes.
+SCD = Slowly Changing Dimension. dimension table tracks historical changes over time.
+GROUP BY SQL = groups rows with same values into summary rows, usually for COUNT MAX SUM.
+Data Pipeline = set of automated processes moving data from one system to another.
+Dirty Data = data with errors, duplicates, missing values, bad formatting.
+ORM = Object-Relational Mapper. interact with db using object-oriented code instead of raw SQL.
+Data Governance = overall management of data availability, usability, integrity, security.
+NULL vs 0 vs empty string -> NULL means unknown/missing. not a value. must use IS NULL.
